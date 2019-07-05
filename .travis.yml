@@ -3,9 +3,9 @@ language: python
 matrix:
     include:
         - os: linux
-          name: "Python 3.5 on Linux"
+          name: "Python 2.7 on Linux"
           python: 3.6
-          env: CONDA_PY=3.5 PANDAS=0.20.1 PYSAM=0.10.0
+          env: CONDA_PY=2.7 PANDAS=0.20.1 PYSAM=0.10.0
 
         - os: linux
           name: "Python 3.5 on Linux"
