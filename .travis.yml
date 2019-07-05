@@ -19,7 +19,7 @@ before_script:
     - conda create -yq --name testenv python=$CONDA_PY
     - source activate testenv
     - if [[ "$CONDA_PY" == "2.7" ]]; then conda install -yq futures>=3.0; fi
-    - if [[ "$TRAVIS_OS_NAME" != "osx" ]]; then conda install -yq -c bioconda atlas; fi
+    - if [[ "$TRAVIS_OS_NAME" != "osx" ]]; then conda install -yq -c bioconda; fi
     # Install the versions desired for testing
     - conda install -yq -c bioconda --no-channel-priority
         cython
