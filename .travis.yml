@@ -23,6 +23,11 @@ matrix:
           env: CONDA_PY=3.7 PANDAS='*' PYSAM='*'
 
         - os: osx
+          name: "Python 3.5 on MacOSX"
+          language: generic
+          env: CONDA_PY=3.5 PANDAS=0.22.0 PYSAM=0.10.0
+
+        - os: osx
           name: "Python 3.6 on MacOSX"
           language: generic
           env: CONDA_PY=3.6 PANDAS='*' PYSAM='*'
@@ -33,8 +38,7 @@ matrix:
           env: CONDA_PY=3.7 PANDAS='*' PYSAM='*'
     allow_failures:
       - python: 2.7
-      - python: 3.5
-
+      - name: "Python 3.5 on MacOSX"
 
 
 install:
