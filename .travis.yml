@@ -4,13 +4,13 @@ matrix:
     include:
         - os: linux
           name: "Python 2.7 on Linux"
-          python: 3.6
-          env: CONDA_PY=2.7 PANDAS=0.20.1 PYSAM=0.10.0
+          python: 2.7
+          env: CONDA_PY=2.7 PANDAS=0.22.0 PYSAM=0.10.0
 
         - os: linux
           name: "Python 3.5 on Linux"
-          python: 3.6
-          env: CONDA_PY=3.5 PANDAS=0.20.1 PYSAM=0.10.0
+          python: 3.5
+          env: CONDA_PY=3.5 PANDAS=0.22.0 PYSAM=0.10.0
 
         - os: linux
           name: "Python 3.6 on Linux"
@@ -31,6 +31,11 @@ matrix:
           name: "Python 3.7 on MacOSX"
           language: generic
           env: CONDA_PY=3.7 PANDAS='*' PYSAM='*'
+    allow_failures:
+      - python: 2.7
+      - python: 3.5
+
+
 
 install:
     - if [ $TRAVIS_OS_NAME = 'osx' ]; then brew install md5sha1sum; fi
